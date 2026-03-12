@@ -1,0 +1,21 @@
+[requirements]
+packages = ["blender"]
+
+[inputs]
+type = "range_continuous"
+ 
+[inputs.range_continuous]
+start = 1
+end   = 250   
+step  = 1
+ 
+[runner]
+command    = "bash render.sh"
+arg_start  = "--start"
+arg_end    = "--end"
+workdir    = "."
+extra_args = ""
+ 
+[outputs]
+dir              = "outputs"
+filename_pattern = "frames_{start}_{end}"
