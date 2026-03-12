@@ -1,5 +1,5 @@
 [requirements]
-packages = ["curl", "xz-utils", "blender"]
+packages = ["curl", "xz-utils", "libsm6", "libxext6", "libxrender1", "libxi6", "libxkbcommon0", "libgl1"]
 
 [inputs]
 type = "range_continuous"
