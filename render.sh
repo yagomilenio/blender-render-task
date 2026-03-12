@@ -21,6 +21,7 @@ if [[ -z "$START" || -z "$END" ]]; then
 fi
 
 OUTPUT="${OUTPUT:-frames_${START}_${END}.tar.gz}"
+mkdir -p "$(dirname "$OUTPUT")" 
 TMP_DIR=$(mktemp -d)
 
 BLEND=blender-4.1-splash.blend
@@ -46,7 +47,7 @@ echo "GPU     : $GPU_DEVICE"
 
 blender \
     --background "$BLEND" \
-    --python-expr "import bpy; bpy.context.scene.cycles.samples = 32" \
+    --python-expr "import bpy; bpy.context.scene.cycles.samples = 32; bpy.context.view_layer.cycles.use_denoising=True" \
     --render-output "$TMP_DIR/" \
     --render-format PNG \
     --render-frame "${START}..${END}" \
