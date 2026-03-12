@@ -20,8 +20,8 @@ if [[ -z "$START" || -z "$END" ]]; then
     exit 1
 fi
 
-OUTPUT="${OUTPUT:-outputs/frames_${START}_${END}}"
-mkdir -p "$OUTPUT"
+OUTPUT="${OUTPUT:-frames_${START}_${END}.tar.gz}"
+TMP_DIR=$(mktemp -d)
 
 BLEND=blender-4.1-splash.blend
 
@@ -47,9 +47,13 @@ echo "GPU     : $GPU_DEVICE"
 blender \
     --background "$BLEND" \
     --python-expr "import bpy; bpy.context.scene.cycles.samples = 32" \
-    --render-output "$(realpath "$OUTPUT")/" \
+    --render-output "$TMP_DIR/" \
     --render-format PNG \
     --render-frame "${START}..${END}" \
     -- --cycles-device "$GPU_DEVICE"
+
+tar -czf "$OUTPUT" -C "$TMP_DIR" .
+
+rm -rf "$TMP_DIR"
 
 echo "Frames $START–$END completados en $OUTPUT"

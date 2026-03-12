@@ -18,4 +18,4 @@ extra_args = ""
  
 [outputs]
 dir              = "outputs"
-filename_pattern = "frames_{start}_{end}"
+filename_pattern = "frames_{start}_{end}.tar.gz"

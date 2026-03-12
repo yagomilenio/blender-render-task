@@ -1,7 +1,7 @@
 START  ?= 1
 END    ?= 10
 BLEND  ?= $(shell ls *.blend 2>/dev/null | head -1)
-OUTPUT ?= outputs/frames_$(START)_$(END)
+OUTPUT ?= outputs/frames_$(START)_$(END).tar.gz
 
 .PHONY: help setup run test clean
 
