@@ -1,5 +1,5 @@
 [requirements]
-packages = ["blender"]
+packages = ["curl", "blender"]
 
 [inputs]
 type = "range_continuous"
