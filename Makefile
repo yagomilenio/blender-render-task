@@ -15,7 +15,7 @@ help:
 
 setup:
 	curl "https://drive.usercontent.google.com/download?id=1L9tkite4WGG3QM8e7MvkTyhYZjHNm_aW&export=download&authuser=0&confirm=t&uuid=7fef5a01-aa7a-4364-93a3-a5333aaeec22&at=AGN2oQ1bYX9PppsVukRcczL4cQW0%3A1773345498431" --output blender-4.1-splash.blend
-	curl "https://drive.google.com/file/d/1TzsxCi8Xvie4PeOJ4U3Xg0Yuch1mWPkk/view?usp=sharing" --output blender-5.1.0-linux-x64.tar.xz
+	curl "https://drive.usercontent.google.com/download?id=1TzsxCi8Xvie4PeOJ4U3Xg0Yuch1mWPkk&export=download&authuser=0&confirm=t&uuid=16c81afd-5c70-4499-9861-a815b0189eff&at=AGN2oQ0MGrB85ijfaOJY6cf_-SoD:1773870247065" --output blender-5.1.0-linux-x64.tar.xz
 	tar -xf blender-5.1.0-linux-x64.tar.xz
 	alias blender="./blender-5.1.0-linux-x64/blender"
 
