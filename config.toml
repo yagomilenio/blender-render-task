@@ -1,5 +1,5 @@
 [requirements]
-packages = ["curl", "xz-utils", "libsm6", "libxext6", "libxrender1", "libxi6", "libxkbcommon0", "libgl1"]
+packages = ["curl", "xz-utils", "libsm6", "libxext6", "libxrender1", "libxi6", "libxkbcommon0", "libgl1", "libegl1", "libxcursor1", "libxfixes3", "libxinerama1", "libxrandr2", "libegl-mesa0"]
 
 [inputs]
 type = "range_continuous"
