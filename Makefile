@@ -15,9 +15,9 @@ help:
 
 setup:
 	curl "https://drive.usercontent.google.com/download?id=1L9tkite4WGG3QM8e7MvkTyhYZjHNm_aW&export=download&authuser=0&confirm=t&uuid=7fef5a01-aa7a-4364-93a3-a5333aaeec22&at=AGN2oQ1bYX9PppsVukRcczL4cQW0%3A1773345498431" --output blender-4.1-splash.blend
-	curl "https://ftp.nluug.nl/pub/graphics/blender/release/Blender5.0/blender-5.0.1-linux-x64.tar.xz" --output blender-5.0.1-linux-x64.tar.xz
-	tar -xf blender-5.0.1-linux-x64.tar.xz
-	alias blender="./blender-5.0.1-linux-x64/blender"
+	curl "https://drive.google.com/file/d/1TzsxCi8Xvie4PeOJ4U3Xg0Yuch1mWPkk/view?usp=sharing" --output blender-5.1.0-linux-x64.tar.xz
+	tar -xf blender-5.1.0-linux-x64.tar.xz
+	alias blender="./blender-5.1.0-linux-x64/blender"
 
 run:
 	bash render.sh --start $(START) --end $(END) --output $(OUTPUT)
