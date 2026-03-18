@@ -45,7 +45,7 @@ echo "Frames  : $START -> $END"
 echo "Output  : $OUTPUT"
 echo "GPU     : $GPU_DEVICE"
 
-blender \
+blender-5.1.0-linux-x64/blender \
     --background "$BLEND" \
     --python-expr "import bpy; bpy.context.scene.cycles.samples = 32; bpy.context.view_layer.cycles.use_denoising=False" \
     --render-output "$TMP_DIR/" \
