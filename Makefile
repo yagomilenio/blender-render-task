@@ -23,4 +23,4 @@ test:
 	bash render.sh --start 1 --end 3 --output outputs/test
 
 clean:
-	rm -rf outputs/frames_* outputs/test
+	rm -rf outputs
